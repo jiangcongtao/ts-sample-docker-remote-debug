@@ -15,5 +15,6 @@ module.exports = {
         // 'off','warn', 'error'
         'no-console': 'off',
         'import/prefer-default-export': 'off',
+        'prettier/prettier': 'error',
     },
 };
