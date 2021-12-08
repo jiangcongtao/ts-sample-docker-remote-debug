@@ -7,5 +7,5 @@ export const signup: Handler = (req, res) => {
         return res.status(400).send('Bad username or password');
     }
     addUser({ username, password });
-    res.status(201).send('User created');
+    return res.status(201).send('User created');
 };

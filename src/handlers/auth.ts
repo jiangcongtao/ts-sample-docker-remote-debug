@@ -7,5 +7,5 @@ export const login: Handler = (req, res) => {
     if (!found) {
         return res.status(401).send('Login failed');
     }
-    res.status(200).send('Success');
+    return res.status(200).send('Success');
 };

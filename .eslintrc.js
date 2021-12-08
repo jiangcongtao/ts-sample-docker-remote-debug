@@ -4,21 +4,16 @@ module.exports = {
         commonjs: true,
         es2021: true,
     },
-    extends: ['plugin:@typescript-eslint/recommended', 'prettier'],
+    extends: ['airbnb-base', 'airbnb-typescript/base', 'prettier'],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 13,
-    },
-    settings: {
-        'import/resolver': {
-            node: {
-                extensions: ['.js', '.jsx', '.ts', '.tsx'],
-                moduleDirectory: ['node_modules', 'src/'],
-            },
-        },
+        project: './tsconfig.json',
     },
     plugins: ['@typescript-eslint', 'prettier'],
     rules: {
-        'no-console': 0,
+        // 'off','warn', 'error'
+        'no-console': 'off',
+        'import/prefer-default-export': 'off',
     },
 };
