@@ -8,7 +8,7 @@
     "scripts": {
         "build": "tsc",
         "watch": "tsc -w -p .",
-        "start": "nodemon index.ts",
+        "start": "nodemon src/index.ts",
         "debug-brk": "nodemon --watch ./dist --inspect-brk=0.0.0.0:9222 --nolazy ./dist/index.js",
         "clean": "rm -rf dist/"
     },
