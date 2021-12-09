@@ -1,14 +1,14 @@
 version: "3.5"
 services:
-    app:  # service name
+    app:  
         build:
             context: .
             dockerfile: Dockerfile
-        env_file: .env  # env variables
+        env_file: .env 
         volumes:
             - .:/app
             - ./dist:/app/dist
         ports:
             - "${APP_PORT}:${APP_PORT}"
-            - "9222:9222" # debug port node for inspect-brk
-        command: yarn debug-brk  # debugging command
+            - "9222:9222" 
+        command: yarn start-inspect 
