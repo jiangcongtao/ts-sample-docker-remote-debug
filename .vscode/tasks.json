@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "tsc-watch",
+            "command": "yarn",
+            "args": ["run", "watch"],
+            "type": "shell",
+            "isBackground": true,
+            "group": "build",
+            "problemMatcher": "$tsc-watch",
+            "presentation": {
+                "reveal": "always"
+            }
+        },
+        {
+            "label": "docker-compose-up",
+            "command": "docker-compose",
+            "args": ["up"],
+            "type": "shell",
+            "isBackground": true,
+            "group": "build",
+            "problemMatcher": "",
+            "presentation": {
+                "reveal": "always"
+            },
+            "dependsOn": ["tsc-watch"]
+        }
+    ]
+}

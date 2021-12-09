@@ -9,6 +9,7 @@ module.exports = {
     parserOptions: {
         ecmaVersion: 13,
         project: './tsconfig.json',
+        extraFileExtensions: ['*.ts', '*.tsx'],
     },
     plugins: ['@typescript-eslint', 'prettier'],
     rules: {
